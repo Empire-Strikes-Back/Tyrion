@@ -1,4 +1,4 @@
-(ns still-going-strong.microwaved-beets
+(ns program-name.drawing
   (:require
    [clojure.core.async :as Little-Rock
     :refer [chan put! take! close! offer! to-chan! timeout thread

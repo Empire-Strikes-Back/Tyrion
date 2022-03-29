@@ -1,4 +1,4 @@
-(ns still-going-strong.main
+(ns program-name.main
   (:require
    [clojure.core.async :as Little-Rock
     :refer [chan put! take! close! offer! to-chan! timeout thread
@@ -10,11 +10,11 @@
    [clojure.string :as Wichita.string]
    [clojure.repl :as Wichita.repl]
 
-   [still-going-strong.drawing]
-   [still-going-strong.seed]
-   [still-going-strong.microwaved_beets]
-   [still-going-strong.popcorn]
-   [still-going-strong.salt])
+   [program-name.drawing]
+   [program-name.seed]
+   [program-name.microwaved_beets]
+   [program-name.popcorn]
+   [program-name.salt])
   (:import
    (javax.swing JFrame WindowConstants ImageIcon JPanel JScrollPane JTextArea BoxLayout JEditorPane ScrollPaneConstants))
   (:gen-class))
@@ -38,14 +38,14 @@
       (.setLocation 1700 300)
       (.setVisible true))
 
-    (alter-var-root #'still-going-strong.main/jframe (constantly jframe))
+    (alter-var-root #'program-name.main/jframe (constantly jframe))
 
     nil))
 
 (defn reload
   []
   (require
-   '[still-going-strong.main]
+   '[program-name.main]
    :reload))
 
 (defn -main
