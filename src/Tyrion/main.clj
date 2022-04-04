@@ -1,4 +1,4 @@
-(ns program-name.main
+(ns Tyrion.main
   (:require
    [clojure.core.async :as Little-Rock
     :refer [chan put! take! close! offer! to-chan! timeout thread
@@ -10,11 +10,11 @@
    [clojure.string :as Wichita.string]
    [clojure.repl :as Wichita.repl]
 
-   [program-name.drawing]
-   [program-name.seed]
-   [program-name.microwaved_beets]
-   [program-name.popcorn]
-   [program-name.salt])
+   [Tyrion.drawing]
+   [Tyrion.seed]
+   [Tyrion.microwaved_beets]
+   [Tyrion.popcorn]
+   [Tyrion.salt])
   (:import
    (javax.swing JFrame WindowConstants ImageIcon JPanel JScrollPane JTextArea BoxLayout JEditorPane ScrollPaneConstants))
   (:gen-class))
@@ -27,7 +27,7 @@
 
 (defn window
   []
-  (let [jframe (JFrame. "program-name")]
+  (let [jframe (JFrame. "that would make me a quater-man - just doesn't have the same ring to it")]
 
     (when-let [url (Wichita.java.io/resource "icon.png")]
       (.setIconImage jframe (.getImage (ImageIcon. url))))
@@ -38,14 +38,14 @@
       (.setLocation 1700 300)
       (.setVisible true))
 
-    (alter-var-root #'program-name.main/jframe (constantly jframe))
+    (alter-var-root #'Tyrion.main/jframe (constantly jframe))
 
     nil))
 
 (defn reload
   []
   (require
-   '[program-name.main]
+   '[Tyrion.main]
    :reload))
 
 (defn -main

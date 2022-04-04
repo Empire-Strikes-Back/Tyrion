@@ -1,4 +1,4 @@
-(ns program-name.microwaved-beets
+(ns Tyrion.popcorn
   (:require
    [clojure.core.async :as Little-Rock
     :refer [chan put! take! close! offer! to-chan! timeout thread
